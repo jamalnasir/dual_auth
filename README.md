@@ -1,7 +1,7 @@
 ## About Dual Auth
 
-Dual Authentication facilitates developers who need to implement the two types of authentication services i.e; frontend and administrator modules.
-Modifications and improvements are encouraged.
+Dual Authentication facilitates developers who need to implement the two types of modules i.e; frontend and administrator modules.
+Everyone is encouraged for modifications and improvements.
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
