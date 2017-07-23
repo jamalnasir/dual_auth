@@ -37,7 +37,7 @@ class AuthenticateAdmin
      */
     public function handle($request, Closure $next)
     {
-        if($request->user()) return redirect()->to('/');
+        if($request->user()) abort(401); //return redirect()->to('/');
 
         if ($this->auth->guest()) {
             if ($request->ajax()) {

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -7,6 +7,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
+                @if(session()->has('error'))
+                        <div class="text-center alert alert-danger">
+                           {{ session('error') }}
+                        </div>
+                    @endif
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/login') }}">
                         {{ csrf_field() }}
 
@@ -53,10 +58,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
                             </div>
                         </div>
                     </form>
